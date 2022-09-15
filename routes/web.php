@@ -17,15 +17,3 @@ Route::get('/', function () {
     $title = 'home';
     return view('comics',compact('title'));
 });
-Route::get('/', function () {
-    return view('header');
-});
-Route::get('/', function () {
-    return view('jumbotron');
-});
-Route::get('/', function () {
-    return view('main');
-});
-Route::get('/', function () {
-    return view('footer');
-});
