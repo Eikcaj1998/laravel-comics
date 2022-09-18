@@ -108,6 +108,28 @@ main .background img {
   font-size: 13px;
   font-weight: bold;
 }
+.single .fs-12 {
+  font-size: 12px;
+  text-align: justify;
+}
+.single .green {
+  background-color: #55BA59;
+}
+.single .text-green {
+  color: #BAFD8D;
+}
+.single .azure {
+  color: #00A9D9;
+}
+.single .grey {
+  background-color: #F6F6F6;
+}
+.single .w-45 {
+  width: 45%;
+}
+.single .w-70 {
+  width: 70%;
+}
 
 footer {
   background-image: url("../images/footer-bg.jpg");

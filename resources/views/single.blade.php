@@ -11,21 +11,20 @@
         </div>
         <div class="container py-5">
             <div class="row">
-                <div class="col">
-                    <p class="fs-1 fw-bolder">{{ $product['title'] }}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="bg-white text-dark col-8">
-                    <div class="row bg-success mx-1 price align-items-center">
-                        <div class="col-8 py-2 text-white border-right h-100">
-                            <span>U.S. Price: {{ $product['price'] }}</span>
-                        </div>
-                        <div class="col-4">
-                            <span class="text-white">Check Availability</span>
+                <div class="col-8">
+                    <div class="row pt-4">
+                        <div class="col">
+                            <h2 class="fs-1 fw-bolder">{{ $product['title'] }}</h2>
                         </div>
                     </div>
-                    <p>{{ $product['description'] }}</p>
+                    <div class="d-flex text-white green border-bottom border-secondary">
+                        <div class="py-3 d-flex justify-content-between border-right  border-secondary col-9">
+                            <span>U.S. Price: {{ $product['price'] }}</span>
+                            <span class="text-green">AVAILABLE</span>
+                        </div>
+                        <span class="px-3 py-3 border-secondary">Check Availability</span>
+                    </div>
+                    <div>{{ $product['description'] }}</div>
                 </div>
                 <div class="col-4 text-right">
                     <h4 class="text-secondary">ADVERTISEMENT</h4>
@@ -34,64 +33,58 @@
 
             </div>
         </div>
-        <section class="talent-specs py-5">
-            <div class="container">
+        <section class="py-5 grey">
+            <div class="container pb-5">
                 <div class="row">
-                    <div class="col-6">
-                        <h4 class="border-bottom pb-4">Talent</h4>
-                        <div class="row m-0 border-bottom py-2">
+                    <div class="d-flex justify-content-between">
+                        <div class="row w-45 d-flex flex-column">
+                            <h4 class="border-bottom pb-3">Talent</h4>
+                            <div class="row m-0">
+                                <div class="d-flex justify-content-between m-0 border-bottom">
 
-                            <div class="col-3">
-                                <span>
-                                    Art by:
-                                </span>
-                            </div>
-                            <div class="col-9">
-                                @foreach ($product['artists'] as $artist)
-                                    <span class="text-primary">{{ $artist }},</span>
-                                @endforeach
-                            </div>
-                        </div>
-                        <div class="row m-0 border-bottom py-2">
-                            <div class="col-3">
-                                <span>
-                                    Written by:
-                                </span>
-                            </div>
-                            <div class="col-9">
-                                @foreach ($product['writers'] as $writer)
-                                    <span class="text-primary">{{ $writer }}</span>
-                                @endforeach
+                                    <span>Art by:</span>
+                                    <div class="w-70">
+                                        @foreach ($product['artists'] as $artist)
+                                            <span class="azure fs-12">{{ $artist }},</span>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="row m-0 border-bottom  py-1">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Written by:</span>
+                                        <div class="w-70">
+                                            @foreach ($product['writers'] as $writer)
+                                                <span class="azure fs-12">{{ $writer }}</span>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-6 pl-5">
-                        <h4 class="border-bottom pb-4">Specs</h4>
-                        <div class="row m-0 py-2 border-bottom">
-                            <div class="col-3">
-                                <span>Series:</span>
+                        <div class="row w-45 d-flex flex-column">
+                            <h4 class="border-bottom pb-3 m-0">Specs</h4>
+                            <div class="border-bottom ">
+                                <div class="d-flex justify-content-between py-2">
+                                    <span>Series:</span>
+                                    <div class="w-70">
+                                        <span class="fw-bold azure">{{ $product['series'] }}</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-9">
-                                <span class="fw-bold text-primary">{{ $product['series'] }}</span>
-
-                            </div>
-                        </div>
-                        <div class="row m-0 py-2 border-bottom">
-                            <div class="col-3">
+                            <div class="d-flex justify-content-between align-items-center border-bottom">
                                 <span>U.S. Price:</span>
+                                <div class="w-70">
+                                    <span class="fw-bold">{{ $product['price'] }}</span>
+                                </div>
                             </div>
-                            <div class="col-9">
-                                <span class="fw-bold">{{ $product['price'] }}</span>
-
-                            </div>
-                        </div>
-                        <div class="row m-0 py-2 border-bottom">
-                            <div class="col-3">
+                            <div class="d-flex justify-content-between align-items-center border-bottom">
                                 <span>On Sale Date:</span>
-                            </div>
-                            <div class="col-9">
-                                <span class="fw-bold">{{ $product['sale_date'] }}</span>
+                                <div class="w-70">
+                                    <span class="fw-bold">{{ $product['sale_date'] }}</span>
 
+                                </div>
                             </div>
                         </div>
                     </div>
