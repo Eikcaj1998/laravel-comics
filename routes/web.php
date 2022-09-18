@@ -15,15 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $title = 'home';
-    return view('comics',compact('title'));
+    return view('home',compact('title'));
 });
+Route::get('/main', function () {
+    $data = config('comics');
+    return view('main',compact('data'));
+    
+})->name('series');
 
-/* Route::get('/includes/{{id}}', function($id){
-    $products = config('pasta');
+Route::get('/single/{id}', function($id){
+    $products = config('comics');
     if (!is_numeric($id) || $id < 0 || $id >= count($products)){
         abort(404);
     }
     $product = $products[$id];
-    return view('products.show',compact('product'));
-});
- */
+    return view('single',compact('product'));
+})->name('single');

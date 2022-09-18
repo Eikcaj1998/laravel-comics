@@ -1,21 +1,30 @@
-
-  <header>
-    <header class="container">
-        <div id="header-flex">
-            <img src={{asset('images/dc-logo.png')}} alt="logo DC">
-            <nav>
-              <ul>
-                  <li class="fw-bold"><span>Characters</span></li>
-                  <li class="fw-bold"><span>Comics</span></li>
-                  <li class="fw-bold"><span>Movies</span></li>
-                  <li class="fw-bold"><span>Tv</span></li>
-                  <li class="fw-bold"><span>Games</span></li>
-                  <li class="fw-bold"><span>Collectibles</span></li>
-                  <li class="fw-bold"><span>Videos</span></li>
-                  <li class="fw-bold"><span>Fans</span></li>
-                  <li class="fw-bold"><span>News</span></li>
-                  <li class="fw-bold"><span>Shop</span></li>
-              </ul>                                
-            </nav>       
+<header>
+    <div class="blue text-white">
+      <div class="container">
+          <ul  class=" d-flex justify-content-end">
+            <li class="px-5">DC liOWER VISA</li>
+            <li>ADDITCTIONAL DC SITES</li>
+          </ul>
+        </div>
       </div>
-  </header>
+    </div>
+    <div class="container py-2">
+        <div class="row d-flex justify-content-between align-items-center">
+            <img src={{ asset('images/dc-logo.png') }} alt="logo DC">
+            <nav>
+                <ul>
+                    <li class="fw-bold"><a>Characters</a></li>
+                    <li class="fw-bold"><a>Comics</a></li>
+                    <li class="fw-bold"><a>Movies</a></li>
+                    <li class="fw-bold"><a>Tv</a></li>
+                    <li class="fw-bold"><a>Games</a></li>
+                    <li class="fw-bold"><a>Collectibles</a></li>
+                    <li class="fw-bold"><a>Videos</a></li>
+                    <li class="fw-bold"><a>Fans</a></li>
+                    <li class="fw-bold"><a>News</a></li>
+                    <li class="fw-bold"><a>Shop</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

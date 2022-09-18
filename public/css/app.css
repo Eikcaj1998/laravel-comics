@@ -14,34 +14,29 @@ img {
   max-width: 100%;
 }
 
-header {
-  height: 120px;
-  margin: 20px auto;
+header .blue {
+  background-color: #0282F9;
 }
-header #header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header figure {
-  height: 90%;
-}
-header figure img {
-  height: 90%;
-  margin-top: 7px;
-}
-header ul {
-  display: flex;
+header .blue ul {
   list-style-type: none;
 }
-header ul li {
+header img {
+  height: 65px;
+}
+header .py-2 ul {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+}
+header .py-2 ul li {
   padding: 10px;
   margin-right: 10px;
   text-transform: uppercase;
   font-size: 13px;
   font-weight: bolder;
 }
-header ul li a:hover, header ul li a:active {
+header .py-2 ul li a:hover, header .py-2 ul li a:active {
   color: dodgerblue;
   border-bottom: 5px solid dodgerblue;
 }
@@ -61,9 +56,10 @@ main .container {
 main .flag {
   background-color: #0282f9;
   position: absolute;
-  top: -105px;
+  top: -56px;
   left: 10px;
   padding: 0.5rem;
+  text-align: center;
 }
 main .comic-card {
   width: 16.6666666667%;
@@ -84,12 +80,33 @@ main button {
 }
 main .background {
   background-color: #0282f9;
-  padding: 1rem;
+  padding: 2rem;
 }
 main .background img {
-  height: 4rem;
+  height: 3rem;
   width: 3rem;
   margin-right: 0.8rem;
+}
+
+.single .jumbotron {
+  background-image: url(../images/jumbotron.jpg);
+  width: 100%;
+  height: 25rem;
+  margin-bottom: 0;
+}
+.single .container {
+  position: relative;
+}
+.single .cover {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  text-align: center;
+  border: solid white 1px;
+}
+.single h4 {
+  font-size: 13px;
+  font-weight: bold;
 }
 
 footer {
@@ -100,7 +117,6 @@ footer {
 }
 footer .col-4 {
   padding-top: 40px;
-  height: 200px;
 }
 footer h4 {
   color: white;
